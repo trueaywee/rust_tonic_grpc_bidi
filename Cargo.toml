@@ -1,0 +1,28 @@
+[package]
+name = "rust_tonic_grpc_bidi"
+version = "0.1.0"
+edition = "2021"
+authors = ["Maxim Losev <losevmv@gmail.com>"]
+license = "MIT"
+publish = false
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "perftest"
+path = "src/perftest.rs"
+
+[dependencies]
+tonic = "0.7.1"
+prost = "0.10.1"
+futures = { version = "0.3.21", default-features = false, features = ["alloc"] }
+tokio = { version = "1.18.1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tokio-stream = "0.1.8"
+async-stream = "0.3.3"
+rand = { version = "0.8.5", features = ["std_rng"]}
+h2 = "0.3.13"
+
+[build-dependencies]
+tonic-build = "0.7.1"
