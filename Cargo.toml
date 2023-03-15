@@ -15,14 +15,14 @@ name = "perftest"
 path = "src/perftest.rs"
 
 [dependencies]
-tonic = "0.7.1"
-prost = "0.10.1"
-futures = { version = "0.3.21", default-features = false, features = ["alloc"] }
-tokio = { version = "1.18.1", features = ["rt-multi-thread", "macros", "sync", "time"] }
-tokio-stream = "0.1.8"
-async-stream = "0.3.3"
+tonic = "0.8.3"
+prost = "0.11.8"
+futures = { version = "0.3.27", default-features = false, features = ["alloc"] }
+tokio = { version = "1.26.0", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tokio-stream = "0.1.12"
+async-stream = "0.3.4"
 rand = { version = "0.8.5", features = ["std_rng"]}
-h2 = "0.3.13"
+h2 = "0.3.16"
 
 [build-dependencies]
-tonic-build = "0.7.1"
+tonic-build = "0.8.4"
