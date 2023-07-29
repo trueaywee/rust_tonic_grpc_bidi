@@ -2,11 +2,10 @@ pub mod pb {
     tonic::include_proto!("test_bidi_stream");
 }
 
-use futures::Stream;
 use std::cmp::{max, min};
 use std::{net::ToSocketAddrs, pin::Pin};
 use tokio::sync::mpsc;
-use tokio_stream::{wrappers::ReceiverStream, StreamExt};
+use tokio_stream::{wrappers::ReceiverStream, StreamExt, Stream};
 use tonic::{transport::Server, Request, Response, Status, Streaming};
 
 use pb::{Req, Res};

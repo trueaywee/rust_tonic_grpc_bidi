@@ -2,10 +2,9 @@ pub mod pb {
     tonic::include_proto!("test_bidi_stream");
 }
 
-use futures::Stream;
 use rand::{rngs::StdRng, Rng, SeedableRng};
 use std::time::Instant;
-use tokio_stream::StreamExt;
+use tokio_stream::{Stream, StreamExt};
 use tonic::transport::Channel;
 
 use pb::Req;
