@@ -20,10 +20,10 @@ fn requests_iter() -> impl Stream<Item = Req> {
         let i: i32 = rng.gen_range(1..len);
         let c: i32 = rng.gen_range(0..len - i);
         Req {
-            id: id,
+            id,
             s: input,
-            i: i,
-            c: c,
+            i,
+            c,
             n: rng.gen_range(1..=50),
         }
     })
