@@ -15,8 +15,8 @@ name = "perftest"
 path = "src/perftest.rs"
 
 [dependencies]
-tonic = "0.11"
-prost = "0.12"
+tonic = "0.12.1"
+prost = "0.13.1"
 tokio = { version = "1.36", features = ["rt-multi-thread", "macros", "sync", "time"] }
 tokio-stream = "0.1"
 async-stream = "0.3"
@@ -24,4 +24,4 @@ rand = { version = "0.8", features = ["std_rng"]}
 h2 = "0.4"
 
 [build-dependencies]
-tonic-build = "0.11"
+tonic-build = "0.12.1"
