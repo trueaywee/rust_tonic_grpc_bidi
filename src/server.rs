@@ -5,7 +5,7 @@ pub mod pb {
 use std::cmp::{max, min};
 use std::{net::ToSocketAddrs, pin::Pin};
 use tokio::sync::mpsc;
-use tokio_stream::{wrappers::ReceiverStream, StreamExt, Stream};
+use tokio_stream::{wrappers::ReceiverStream, Stream, StreamExt};
 use tonic::{transport::Server, Request, Response, Status, Streaming};
 
 use pb::{Req, Res};

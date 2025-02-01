@@ -17,14 +17,14 @@ fn requests_iter() -> impl Stream<Item = Req> {
     tokio_stream::iter(STARTID..u64::MAX).map(move |id| {
         let input = String::from("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
         let len = input.len() as i32;
-        let i: i32 = rng.gen_range(1..len);
-        let c: i32 = rng.gen_range(0..len - i);
+        let i: i32 = rng.random_range(1..len);
+        let c: i32 = rng.random_range(0..len - i);
         Req {
             id,
             s: input,
             i,
             c,
-            n: rng.gen_range(1..=50),
+            n: rng.random_range(1..=50),
         }
     })
 }
